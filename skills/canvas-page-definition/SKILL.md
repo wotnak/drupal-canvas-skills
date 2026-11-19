@@ -86,6 +86,8 @@ The page file may also include:
 
 - `description`: a short plain-text summary of the page. Surfaced as page
   metadata (e.g., for listings or SEO). Leave as an empty string if not set.
+- `pageVariant`: the machine name of a page template. Omit it to inherit the
+  site default. See `canvas-page-templates` for shared layout.
 
 Each entry in `elements` must include:
 

@@ -54,6 +54,8 @@ Each content template is a JSON object with these top-level keys:
 - `bundle` (required): the content type / bundle (e.g., `"article"`)
 - `viewMode` (required): the view mode (e.g., `"full"`, `"teaser"`)
 - `elements` (required): an object of component elements keyed by element ID
+- `pageVariant` (optional for `full` view mode): the machine name of the page
+  template. See `canvas-page-templates` for assignment details.
 
 The filename must match `{entityType}.{bundle}.{viewMode}.json` and correspond
 to the values inside the file.

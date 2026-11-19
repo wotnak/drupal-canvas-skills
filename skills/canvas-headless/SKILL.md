@@ -191,12 +191,13 @@ above) and changes behavior without any flag:
   `canvas build` to report "No components found. Nothing to build." in a
   headless project; this is normal and not something to fix.
 
-## Pages, regions, and content templates
+## Pages and templates
 
-- **Global regions are not supported** in headless projects. Site chrome and
-  layout belong to the framework app (its own routes and layout files, with a
-  catch-all route rendering `fetchPage()` results). Do not create region specs
-  or a `layout.jsx`.
+- **Page templates can provide site chrome** for full-page Canvas content. Use
+  frontend-renderable components and the route's composed Canvas tree. The
+  headless content API skips theme-backed page templates. Use the framework's
+  own layout for app-owned chrome and routes. See `canvas-page-templates` for
+  authoring details.
 - **Page specs and content templates work in headless codebases**, controlled by
   the `sync.pages` and `sync.contentTemplates` options in `canvas.config.json`.
   Only create them when the matching option is enabled. Projects generated with

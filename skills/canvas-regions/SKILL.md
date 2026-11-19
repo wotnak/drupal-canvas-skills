@@ -3,20 +3,26 @@ name: canvas-regions
 description:
   Use when maintaining legacy Canvas theme-global regions, region JSON, or a
   project-level Region-based layout. Also consult for existing region-based site
-  chrome. Region APIs are deprecated; new integrations should use page variants
-  and composed page trees instead.
+  chrome. Region APIs are deprecated. New integrations should use page templates
+  and composed page trees.
 ---
 
 ## Legacy scope
 
-`Region` and `RegionsProvider` are deprecated in favor of page variants and
-composed page trees. Existing integrations keep working; do not introduce a new
-region-provider integration or automatically migrate existing region files.
+`Region` and `RegionsProvider` are deprecated in favor of page templates and
+composed page trees. Existing integrations keep working with legacy tooling. Do
+not introduce a new region-provider integration or automatically migrate
+existing region files.
 
 The instructions below describe maintenance of an existing theme-global region
-workflow only. For new site chrome, consult the target Canvas version's
-page-variant documentation rather than treating these region specs as the
-current authoring model. A page-variant migration is a separate task.
+workflow only. For new site chrome, see `canvas-page-templates`. A page template
+migration is a separate task.
+
+This workflow targets existing sites on Canvas 1.10 or earlier. CLI 0.24 and
+Workbench 0.11 switched from region files to page template files. Canvas 1.11
+introduced the migration from global regions. See the
+[Canvas change record](https://www.drupal.org/node/3618546) for migration
+details.
 
 ## Project type
 
